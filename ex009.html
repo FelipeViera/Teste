@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condições</title>
+</head>
+<body>
+    velocidade do carro em Km/h
+    <input id="veloc" type="Number">
+    <input id="iniciar" type="button" value="iniciar" onclick="iniciar()">
+    <div id="escrito" ></div>
+    <div id="esc"></div>
+    <script>
+        function iniciar() {
+            var a = document.getElementById('escrito')
+            var t1 = document.getElementById('veloc')
+            var n1 = Number(t1.value)
+            if (n1 > 70) {
+                a.innerHTML = `Você está dirigindo a uma velocidade de ${n1} km/hr e você foi <strong> MULTADO </strong>`
+            }
+            else {
+                a.innerText = `Continue assim`
+            }
+            document.getElementById('esc').innerText = 'Dirija sempre com cuidado'
+        }
+    </script>
+</body>
+</html>
