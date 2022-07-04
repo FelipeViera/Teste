@@ -32,47 +32,56 @@
         var n = null
         var n1 = 0
         var n2 = null
+        var s = 0
     
         function divisao(){
             if (qual === 'nenhum') {
-                n2 = 0
-                n1 = n 
-                n1 = Number(n1)
-                n = n + `÷`
-                num.innerHTML = n
-                qual = 'divisao'
+                if ( n != null ) {
+                    n2 = 0
+                    n1 = n 
+                    n1 = Number(n1)
+                    n = n + `÷`
+                    num.innerHTML = n
+                    qual = 'divisao'
+                }
             }
         }
         function menos(){
             if ( qual === 'nenhum'){
-                n2 = 0
-                n1 = n 
-                n1 = Number(n1)
-                n = n + `-`
-                num.innerHTML = n
-                qual = 'menos'
+                if ( n != null){
+                    n2 = 0
+                    n1 = n 
+                    n1 = Number(n1)
+                    n = n + `-`
+                    num.innerHTML = n
+                    qual = 'menos'
+                }
             }
         }
         function vezes(){
             if (qual === 'nenhum') {
-                n2 = 0
-                n1 = n 
-                n1 = Number(n1)
-                n = n + `x`
-                num.innerHTML = n
-                qual = 'vezes'
+                if ( n != null){
+                    n2 = 0
+                    n1 = n 
+                    n1 = Number(n1)
+                    n = n + `x`
+                    num.innerHTML = n
+                    qual = 'vezes'
+                }
             }
         
         }
 
         function mais(){
             if (qual == 'nenhum') {
-                n2 = 0
-                n1 = n 
-                n1 = Number(n1)
-                n = n + `+`
-                num.innerHTML = n
-                qual = 'mais'
+                if (n != null){
+                    n2 = 0
+                    n1 = n 
+                    n1 = Number(n1)
+                    n = n + `+`
+                    num.innerHTML = n
+                    qual = 'mais'
+                }
             }
         }
         
