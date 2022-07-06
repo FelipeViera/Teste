@@ -1,0 +1,95 @@
+input {
+    font-size: 24pt;
+    font-family: Arial;
+    height: 60px;
+    width: 60px;
+}
+
+#seven {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+}
+#eight {
+    position: absolute;
+    left: 75px;
+    top: 100px;
+    
+}
+#nine {
+    position: absolute;
+    left: 140px;
+    top: 100px;
+}
+#division {
+    position: absolute;
+    left: 205px;
+    top: 100px;
+}
+#six {
+    position: absolute;
+    left: 140px;
+    top: 165px;
+}
+#five {
+    position: absolute;
+    left: 75px;
+    top: 165px;
+}
+
+#four {
+    position: absolute;
+    left: 10px;
+    top: 165px;
+}
+#three {
+    position: absolute;
+    left: 140px;
+    top: 230px;
+}
+#two {
+    position: absolute;
+    left: 75px;
+    top: 230px;
+}
+#one {
+    position: absolute;
+    left: 10px;
+    top: 230px;
+}
+#zero {
+    position: absolute;
+    left: 10px;
+    top: 295px;
+}
+#ini {
+    position: absolute;
+    left: 140px;
+    top: 295px;
+}
+#mais {
+    position: absolute;
+    left: 205px;
+    top: 295px;
+}
+#delete {
+    position: absolute;
+    left: 75px;
+    top: 295px;
+    font-size: 19pt;
+}
+#menos {
+    position: absolute;
+    left: 205px;
+    top: 230px;
+}
+#vezes {
+    position: absolute;
+    left: 205px;
+    top: 165px;
+}
+#nume {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+}

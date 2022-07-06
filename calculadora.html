@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css"
 </head>
 <body>
     <h1> Essa é a calculadora do Fefe</h1>
-    <input type="button" value="1" onclick="um()" id="1"> 
-    <input type="button" value="2" onclick="dois()" id="2"> 
-    <input type="button" value="3" onclick="tres()" id="3"> 
-    <input type="button" value="4" onclick="quatro()" id="4"> 
-    <input type="button" value="5" onclick="cinco()" id="5">
-    <input type="button" value="6" onclick="seis()" id="6">
-    <input type="button" value="7" onclick="sete()" id="7"> 
-    <input type="button" value="8" onclick="oito()" id="8">
-    <input type="button" value="9" onclick="nove()" id="9">
-    <input type="button" value="10" onclick="dez()" id="10">
+    <input type="button" value="0" onclick="zero()" id="zero">
+    <input type="button" value="1" onclick="um()" id="one"> 
+    <input type="button" value="2" onclick="dois()" id="two"> 
+    <input type="button" value="3" onclick="tres()" id="three"> 
+    <input type="button" value="4" onclick="quatro()" id="four"> 
+    <input type="button" value="5" onclick="cinco()" id="five">
+    <input type="button" value="6" onclick="seis()" id="six">
+    <input type="button" value="7" onclick="sete()" id="seven"> 
+    <input type="button" value="8" onclick="oito()" id="eight">
+    <input type="button" value="9" onclick="nove()" id="nine">
     <input type="button" value="+" onclick="mais()" id="mais">
-    <input type="button" value="x" onclick="vezes()" id="x">
+    <input type="button" value="x" onclick="vezes()" id="vezes">
     <input type="button" value="-" onclick="menos()" id="menos">
     <input type="button" value="÷" onclick="divisao()" id="division">
-    <input type="button" value="iniciar" onclick="inicio()" id="ini">
+    <input type="button" value="=" onclick="inicio()" id="ini">
+    <input type="button" value="Del" onclick="delet()" id="delete">
     <div id="nume"></div>
 
     <script>
@@ -84,7 +86,23 @@
                 }
             }
         }
-        
+
+        function zero(){
+           if ( n2 == 0){
+            n2 = '0'
+           }
+           else {
+            n2 = n2 + '0'
+           }
+           if ( n == null){
+            n = '0'
+            
+           }
+           else {
+            n = n + '0'
+           }
+           num.innerText = n
+        }
         function um(){
             if ( n2 == 0){
                 n2 = '1'
@@ -228,20 +246,8 @@
             }
             num.innerHTML = n
         }
-        function dez(){
-            if ( n2 == 0){
-                n2 = '10'
-            }
-            else {
-                n2 = n2 + '10'
-            }
-            if ( n == null){
-                n = '10'
-            }
-            else {
-                n = n + '10'
-            }
-            num.innerHTML = n
+        function delet(){
+            alert('é a tropa do calvo')
         }
         function inicio(){
             n2 = Number(n2)
