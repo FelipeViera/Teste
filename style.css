@@ -1,3 +1,14 @@
+#nume{
+    top: 10px;
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18pt;
+    font-family: Arial;
+    border-width: 2px;
+    border-style: solid;
+}
 input {
     font-size: 24pt;
     font-family: Arial;
@@ -8,85 +19,85 @@ input {
 #seven {
     position: absolute;
     left: 10px;
-    top: 100px;
+    top: 140px;
 }
 #eight {
     position: absolute;
     left: 75px;
-    top: 100px;
+    top: 140px;
     
 }
 #nine {
     position: absolute;
     left: 140px;
-    top: 100px;
+    top: 140px;
 }
 #division {
     position: absolute;
     left: 205px;
-    top: 100px;
+    top: 140px;
 }
 #six {
     position: absolute;
     left: 140px;
-    top: 165px;
+    top: 205px;
 }
 #five {
     position: absolute;
     left: 75px;
-    top: 165px;
+    top: 205px;
 }
 
 #four {
     position: absolute;
     left: 10px;
-    top: 165px;
+    top: 205px;
 }
 #three {
     position: absolute;
     left: 140px;
-    top: 230px;
+    top: 270px;
 }
 #two {
     position: absolute;
     left: 75px;
-    top: 230px;
+    top: 270px;
 }
 #one {
     position: absolute;
     left: 10px;
-    top: 230px;
+    top: 270px;
 }
 #zero {
     position: absolute;
     left: 10px;
-    top: 295px;
+    top: 335px;
 }
 #ini {
     position: absolute;
     left: 140px;
-    top: 295px;
+    top: 335px;
 }
 #mais {
     position: absolute;
     left: 205px;
-    top: 295px;
+    top: 335px;
 }
 #delete {
     position: absolute;
     left: 75px;
-    top: 295px;
+    top: 335px;
     font-size: 19pt;
 }
 #menos {
     position: absolute;
     left: 205px;
-    top: 230px;
+    top: 270px;
 }
 #vezes {
     position: absolute;
     left: 205px;
-    top: 165px;
+    top: 205px;
 }
 #nume {
     position: absolute;
