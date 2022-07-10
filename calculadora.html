@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,17 @@
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1> Essa é a calculadora do Fefe</h1>
+    <h1> Isso definitivamente é uma calculadora</h1>
     <input type="button" value="0" onclick="zero()" id="zero">
-    <input type="button" value="1" onclick="um()" id="one"> 
-    <input type="button" value="2" onclick="dois()" id="two"> 
-    <input type="button" value="3" onclick="tres()" id="three"> 
-    <input type="button" value="4" onclick="quatro()" id="four"> 
+    <input type="button" value="1" onclick="um()" id="one">
+    <input type="button" value="2" onclick="dois()" id="two">
+    <input type="button" value="3" onclick="tres()" id="three">
+    <input type="button" value="4" onclick="quatro()" id="four">
     <input type="button" value="5" onclick="cinco()" id="five">
     <input type="button" value="6" onclick="seis()" id="six">
-    <input type="button" value="7" onclick="sete()" id="seven"> 
+    <input type="button" value="7" onclick="sete()" id="seven">
     <input type="button" value="8" onclick="oito()" id="eight">
     <input type="button" value="9" onclick="nove()" id="nine">
     <input type="button" value="+" onclick="mais()" id="mais">
@@ -29,249 +31,331 @@
 
     <script>
 
+        var carac = 0
         var num = document.getElementById('nume')
         var qual = 'nenhum'
         var n = null
         var n1 = 0
         var n2 = null
         var s = 0
-    
-        function divisao(){
+
+        function divisao() {
+           if ( carac < 11){
             if (qual === 'nenhum') {
-                if ( n != null ) {
+                if (n != null) {
                     n2 = 0
-                    n1 = n 
+                    n1 = n
                     n1 = Number(n1)
                     n = n + `÷`
                     num.innerHTML = n
                     qual = 'divisao'
+                    carac = carac + 1
                 }
             }
+           }
+           else {
+            alert('pare')
+           }
         }
-        function menos(){
-            if ( qual === 'nenhum'){
-                if ( n != null){
+        function menos() {
+           if ( carac < 11){
+            if (qual === 'nenhum') {
+                if (n != null) {
                     n2 = 0
-                    n1 = n 
+                    n1 = n
                     n1 = Number(n1)
                     n = n + `-`
                     num.innerHTML = n
                     qual = 'menos'
+                    carac = carac + 1
                 }
             }
+           }
+           else{
+            alert('pare')
+           }
         }
-        function vezes(){
+        function vezes() {
+           if ( carac < 11){
             if (qual === 'nenhum') {
-                if ( n != null){
+                if (n != null) {
                     n2 = 0
-                    n1 = n 
+                    n1 = n
                     n1 = Number(n1)
                     n = n + `x`
                     num.innerHTML = n
                     qual = 'vezes'
+                    carac = carac + 1
                 }
             }
-        
+           }
+           else {
+            alert('pare')
+           }
         }
-
-        function mais(){
-            if (qual == 'nenhum') {
-                if (n != null){
-                    n2 = 0
-                    n1 = n 
-                    n1 = Number(n1)
-                    n = n + `+`
-                    num.innerHTML = n
-                    qual = 'mais'
+        function mais() {
+            if (carac < 11) {
+                if (qual == 'nenhum') {
+                    if (n != null) {
+                        n2 = 0
+                        n1 = n
+                        n1 = Number(n1)
+                        n = n + `+`
+                        num.innerHTML = n
+                        qual = 'mais'
+                        carac = carac + 1
+                    }
                 }
             }
-        }
-
-        function zero(){
-           if ( n2 == 0){
-            n2 = '0'
-           }
-           else {
-            n2 = n2 + '0'
-           }
-           if ( n == null){
-            n = '0'
-            
-           }
-           else {
-            n = n + '0'
-           }
-           num.innerText = n
-        }
-        function um(){
-            if ( n2 == 0){
-                n2 = '1'
-            }
             else {
-                n2 = n2 + '1'
-            }
-            if ( n == null){
-                n = '1'
-            }
-            else {
-                n = n + '1'
-            }
-            num.innerHTML = n
-        }
-        function dois(){
-            if ( n2 == 0 ){
-                n2 = '2'
-            }
-            else {
-                n2 = n2 + '2'
-            }
-            if ( n == null){
-                n = '2'
-            }
-            else {
-                n = n + '2'
-            }
-            num.innerHTML = n
-        }
-        function tres(){
-            if ( n2 == 0){
-                n2 = '3'
-            }
-            else {
-                n2 = n2 + '3'
-            }
-            if (n == null){
-                n = '3'
-            }
-            else {
-                n = n +  '3'
-            }
-            num.innerHTML = n
-            
-        }
-        function quatro(){
-            if ( n2 == 0){
-                n2 = '4'
-            }
-            else {
-                n2 = n2 + '4'
+                alert('não pode mais colocar caracteres')
             }
 
-            if (n == null){
-                n = '4'
-            }
-            else {
-                n = n + '4'
-            }
-            num.innerHTML = n
-        }
-        function cinco(){
-            if ( n2 == 0){
-                n2 = `5`
-            }
-            else {
-                n2 = n2 + `5`
-            }
-
-
-            if (n == null){
-                n = `5`
-            }
-            else {
-                n = n + `5`
-            }
-            num.innerHTML = n
         }
 
-        function seis(){
-            if (n2 == 0){
-                n2 = `6`
+        function zero() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = '0'
+                }
+                else {
+                    n2 = n2 + '0'
+                }
+                if (n == null) {
+                    n = '0'
+                }
+                else {
+                    n = n + '0'
+                }
+                num.innerText = n
+                carac = carac + 1
             }
             else {
-                n2 = n2 + `6`
+                alert('não pode mais caracteres')
+
             }
 
-            if (n == null){
-                n = `6`
-            }
-            else {
-                n = n + '6'
-            }
-            num.innerHTML = n
         }
-        function sete(){
-            if ( n2 == 0){
-                n2 = `7`
+        function um() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = '1'
+                }
+                else {
+                    n2 = n2 + '1'
+                }
+                if (n == null) {
+                    n = '1'
+                }
+                else {
+                    n = n + '1'
+                }
+                num.innerHTML = n
+                carac = carac + 1
             }
             else {
-                n2 = n2 + `7`
+                alert('não pode mais caracteres')
             }
+        }
+        function dois() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = '2'
+                }
+                else {
+                    n2 = n2 + '2'
+                }
+                if (n == null) {
+                    n = '2'
+                }
+                else {
+                    n = n + '2'
+                }
+                num.innerHTML = n
+                carac = carac + 1
+            }
+            else {
+                alert('não pode mais carcateres')
+            }
+        }
+        function tres() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = '3'
+                }
+                else {
+                    n2 = n2 + '3'
+                }
+                if (n == null) {
+                    n = '3'
+                }
+                else {
+                    n = n + '3'
+                }
+                num.innerHTML = n
+                carac = carac + 1
+            }
+            else {
+                alert('não pode mais caracteres')
+            }
+        }
+        function quatro() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = '4'
+                }
+                else {
+                    n2 = n2 + '4'
+                }
+
+                if (n == null) {
+                    n = '4'
+                }
+                else {
+                    n = n + '4'
+                }
+                num.innerHTML = n
+                carac = carac + 1
+            }
+            else {
+                alert('não pode mais caracteres')
+            }
+        }
+        function cinco() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = `5`
+                }
+                else {
+                    n2 = n2 + `5`
+                }
 
 
-            if (n == null) {
-                n = `7`
+                if (n == null) {
+                    n = `5`
+                }
+                else {
+                    n = n + `5`
+                }
+                num.innerHTML = n
+                carac = carac + 1
             }
             else {
-                n = n + `7`
+                alert('não pode mais caracteres')
             }
-            num.innerHTML = n
         }
-        function oito(){
-            if ( n2 == 0){
-                n2 = '8'
+
+        function seis() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = `6`
+                }
+                else {
+                    n2 = n2 + `6`
+                }
+
+                if (n == null) {
+                    n = `6`
+                }
+                else {
+                    n = n + '6'
+                }
+                num.innerHTML = n
+                carac = carac + 1
             }
             else {
-                n2 = n2 + '8'
+                alert('não pode mais caracteres')
             }
-            if ( n == null){
-                n = '8'
-            }
-            else {
-                n = n + '8'
-            }
-            num.innerHTML = n
         }
-        function nove(){
-            if ( n2 == 0){
-                n2 = '9'
+        function sete() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = `7`
+                }
+                else {
+                    n2 = n2 + `7`
+                }
+                if (n == null) {
+                    n = `7`
+                }
+                else {
+                    n = n + `7`
+                }
+                num.innerHTML = n
+                carac = carac + 1
             }
             else {
-                n2 = n2 + '9'
+                alert('não pode mais caracteres')
             }
-            if ( n == null){
-                n = '9'
-            }
-            else {
-                n = n + '9'
-            }
-            num.innerHTML = n
         }
-        function delet(){
+        function oito() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = '8'
+                }
+                else {
+                    n2 = n2 + '8'
+                }
+                if (n == null) {
+                    n = '8'
+                }
+                else {
+                    n = n + '8'
+                }
+                num.innerHTML = n
+                carac = carac + 1
+            }
+            else {
+                alert('não pode mais caracteres')
+            }
+        }
+        function nove() {
+            if (carac < 11) {
+                if (n2 == 0) {
+                    n2 = '9'
+                }
+                else {
+                    n2 = n2 + '9'
+                }
+                if (n == null) {
+                    n = '9'
+                }
+                else {
+                    n = n + '9'
+                }
+                num.innerHTML = n
+                carac = carac + 1
+            }
+            else {
+                alert('não pode mais caracteres')
+            }
+        }
+        function delet() {
             alert('é a tropa do calvo')
         }
-        function inicio(){
+        function inicio() {
             n2 = Number(n2)
-            if (qual == 'mais'){
+            if (qual == 'mais') {
                 n1 = n1 + n2
             }
-            if (qual == 'vezes'){
+            if (qual == 'vezes') {
                 n1 = n1 * n2
             }
-            if (qual == 'menos'){
+            if (qual == 'menos') {
                 n1 = n1 - n2
             }
-            if ( qual == 'divisao'){
+            if (qual == 'divisao') {
                 n1 = n1 / n2
             }
             num.innerHTML = n1
             n1 = 0
             n2 = null
             n = null
-            qual = 'nenhum'          
+            qual = 'nenhum'
+            carac = 0
         }
-
-      
     </script>
-    
+
 </body>
+
 </html>
